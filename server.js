@@ -4,6 +4,7 @@ import Masages from './dbmasg.js';
 import Pusher from "pusher";
 import cors from "cors";
 const app=express();
+const port = process.env.PORT || 3001;
 
 const pusher = new Pusher({
     appId: '1086951',
@@ -77,6 +78,6 @@ app.post("/message/new",(req,res)=>{
 
 
 
-app.listen(3001,()=>{
+app.listen(port,()=>{
     console.log(" server started at 3001" );
 })
